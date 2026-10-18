@@ -25,7 +25,7 @@ It shows how to segment a network into multiple VLANs and enable communication b
 
 ## VLAN Design
 
-![image alt]
+![image alt]https://github.com/joyner475/INTER-VLAN-ROUTING/blob/0a87a4cff0b5a9a8bffe84bc08162cc848be5b21/Screenshot%202026-10-18%20143501.png
 
 | VLAN ID | Color  | Name / Purpose     | Devices                          |
 |---------|--------|--------------------|----------------------------------|
