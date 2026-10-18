@@ -25,6 +25,8 @@ It shows how to segment a network into multiple VLANs and enable communication b
 
 ## VLAN Design
 
+![image alt]
+
 | VLAN ID | Color  | Name / Purpose     | Devices                          |
 |---------|--------|--------------------|----------------------------------|
 | 10      | Green  | VLAN 10            | 130.34.12.66 and 130.34.12.67    |
