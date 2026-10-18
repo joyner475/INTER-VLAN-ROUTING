@@ -51,37 +51,37 @@ enable
 configure terminal
 
 ! Create VLANs
-vlan 10 (GREEN)
+- vlan 10 (GREEN)
  
-vlan 20 (YELLOW)
+- vlan 20 (YELLOW)
 
 exit
 
 ! Access ports
 interface FastEthernet0/2
- switchport mode access
- switchport access vlan 10
- no shutdown
+- switchport mode access
+- switchport access vlan 10
+- no shutdown
 
 interface FastEthernet0/3
- switchport mode access
- switchport access vlan 20
- no shutdown
+ - switchport mode access
+ - switchport access vlan 20
+ - no shutdown
 
 ! Trunk to Router
 interface GigabitEthernet0/2
- switchport mode trunk
- switchport trunk allowed vlan 10,20
- no shutdown
+ - switchport mode trunk
+ - switchport trunk allowed vlan 10,20
+ - no shutdown
 
 ! Trunk to Switch1
 interface GigabitEthernet0/1
- switchport mode trunk
- switchport trunk allowed vlan 10,20
- no shutdown
+ - switchport mode trunk
+ - switchport trunk allowed vlan 10,20
+ - no shutdown
 
-end
-write memory
+-end
+-write memory
 
 ### 2. Switch1 Configuration
 
@@ -97,20 +97,20 @@ exit
 
 ! Access ports
 interface FastEthernet0/2
- switchport mode access
- switchport access vlan 10
- no shutdown
+- switchport mode access
+- switchport access vlan 10
+- no shutdown
 
 interface FastEthernet0/3
- switchport mode access
- switchport access vlan 20
- no shutdown
+- switchport mode access
+- switchport access vlan 20
+- no shutdown
 
 ! Trunk to Switch0
 interface GigabitEthernet0/1
- switchport mode trunk
- switchport trunk allowed vlan 10,20
- no shutdown
+- switchport mode trunk
+- switchport trunk allowed vlan 10,20
+- no shutdown
 
 end
 write memory
@@ -121,28 +121,28 @@ enable
 configure terminal
 
 interface GigabitEthernet0/0/0
- no ip address
- no shutdown
+- no ip address
+- no shutdown
 
 ! Subinterface for VLAN 10
 interface GigabitEthernet0/0/0.10
- encapsulation dot1Q 10
- ip address 130.34.12.1 255.255.255.192     ! Adjust mask if needed
- no shutdown
+- encapsulation dot1Q 10
+- ip address 130.34.12.1 255.255.255.192
+- no shutdown
 
 ! Subinterface for VLAN 20
 interface GigabitEthernet0/0/0.20
- encapsulation dot1Q 20
- ip address 130.34.12.65 255.255.255.192    ! Adjust mask if needed
- no shutdown
+- encapsulation dot1Q 20
+- ip address 130.34.12.65 255.255.255.192  
+- no shutdown
 
 end
 write memory
 
 ### Skills learned
-> VLAN creation and naming
-> Access port assignment
-> 802.1Q trunk configuration between switches
-> Router-on-a-Stick inter-VLAN routing
-> Multi-switch VLAN design
-> Connectivity verification
+- VLAN creation and naming
+- Access port assignment
+- 802.1Q trunk configuration between switches
+- Router-on-a-Stick inter-VLAN routing
+- Multi-switch VLAN design
+- Connectivity verification
